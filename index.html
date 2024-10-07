@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 13</title>
+</head>
+<body>
+    
+    <script>
+        
+        //Funciones Matematicas
+        function suma(a,b) {
+            return a+b;
+        }
+
+        function resta(a,b) {
+            return a-b;
+        }
+
+        function multiplicacion(a,b) {
+            return a*b;
+        }
+
+        function divicion(a,b) {
+            return a/b;
+        }
+
+        //Funcion calculadora
+        function calculadora(n1,n2,operacion) {
+            switch (operacion) {
+                case suma:
+                    return suma(n1,n2);
+                case resta:
+                    return resta(n1,n2);
+                case multiplicacion:
+                    return multiplicacion(n1,n2);
+                case divicion:
+                    return divicion(n1,n2);
+                default:
+                    return "Operacion no valida..."
+            }
+        }
+
+        let num1 = parseFloat(prompt("Ingrese el primer numero: "));
+        let num2 = parseFloat(prompt("Ingrese el segundo numero: "));
+        let operacion = prompt("Ingrese la operacion (Suma, Resta, Multiplicacion, Divicion)");
+
+        let resultado = calculadora(num1,num2,operacion)
+
+        console.log("El resultado de su operacion es: "+resultado);
+        document.write("El resultado de su operacion es: "+resultado);
+
+    </script>
+
+</body>
+</html>
